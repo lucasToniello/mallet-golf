@@ -1,0 +1,31 @@
+<%- contentFor('body') %>
+
+<h1 class="center titulo"> Campos </h1>
+
+<table class="table">
+	<thead>
+		<tr>
+		  <th scope="col"> Jogador </th>
+		  <th scope="col"> Data de Nascimento </th>
+		  <th scope="col"> Idade </th>
+		  <th scope="col"> Elo </th>
+		</tr>
+	</thead>
+	
+	<tbody>
+	<% for (jogador of jogadores) { %>
+		<tr class="bottom-line">
+			<td> <%= jogador.name %> </td>
+			<td> <%= jogador.nascimento %> </td>
+			<td> <%= jogador.idade %> </td>
+			<td> <%= jogador.elo %> </td>
+		</tr>
+	<% } %>
+	</tbody>
+</table>
+
+<div class="container">
+	<p> Quer fazer parte do nosso time? Cadastre-se abaixo!</p>
+	<button type="button" class="btn btn-primary btn-lg">  <a href="/jogadores/cadastro"> 
+	Cadastre-se </a> </button>
+</div>

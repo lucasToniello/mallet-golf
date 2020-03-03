@@ -1,0 +1,49 @@
+<%- contentFor('body') %>
+
+<h1 class="center titulo"> Campos </h1>
+
+<table class="table">
+	<thead>
+		<tr>
+		  <th scope="col" class="center">Campo</th>
+		  <th scope="col" class="center">Pares</th>
+		  <th scope="col"></th>
+		</tr>
+	</thead>
+	
+	<tbody>
+	<% for (campo of campos) { %>
+		<tr class="bottom-line">
+			<td class="center" style="padding-top: 5%;"> <%= campo.name %> </td>
+			<td class="no-line">		  
+				<table class="table">
+					<% for (var i = 0; i < 9; i++) { %>
+					<td> <%= campo.par[i] %> </td>
+					<% } %>
+				</table>
+				<table class="table">
+					<% for (var i = 9; i < 18; i++) { %>
+					<td> <%= campo.par[i] %> </td>
+					<% } %>
+				</table>
+			</td>	
+			<td style="padding-top: 5%;"> <button onclick="redirecionar(this.value)" value="<%= campo.id %>"> Jogar!</button> </td>
+		</tr>
+
+	<% } %>
+	</tbody>
+</table>
+
+<div class="container">
+	<p> Quer que seu campo também apareca? Cadastre ele abaixo!</p>
+	<button type="button" class="btn btn-primary btn-lg">  <a href="/campos/cadastro"> 
+	Cadastre-se </a> </button>
+</div>
+
+<script type="text/javascript">
+	
+	function redirecionar(id){
+		window.location.href = "http://localhost:8000/campos/" + id;
+	}
+
+</script>

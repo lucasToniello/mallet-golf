@@ -1,0 +1,28 @@
+<%- contentFor('body') %>
+
+<h1 class="center titulo"> Cadastro do Campo </h1>
+<h5 class="center"> Coloque aqui o nome do seu campo e os pares </h5>
+
+<div class="container">
+	<form action="/campos/cadastro" method="POST">
+		<input type="text" name="nomeCampo">
+
+		<div id="parCampo">
+			<div id="parCampoLeft">
+				<% for (var i = 0; i < 9; i++) { %>
+					<label> <%= i+1 %>: </label>
+					<input type="text" class="hole" name="hole<%= i+1 %>">	
+				<% } %>
+			</div>
+
+			<div id="parCampoRight">
+				<% for (var i = 9; i < 18; i++) { %>
+					<label> <%= i+1 %>: </label>
+					<input type="text" class="hole" name="hole<%= i+1 %>">	
+				<% } %>
+			</div>
+		</div>
+
+		<button type="submit" class="btn btn-primary">Cadastrar</button>
+	</form>
+</div>

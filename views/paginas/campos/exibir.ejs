@@ -1,0 +1,29 @@
+<%- contentFor('body') %>
+
+<h1 class="center titulo"> <%= campo.name %> </h1>
+
+<div class="container">
+	<form action="/campos/<%= id %>" method="POST">
+		<div id="parCampo">
+			<div id="parCampoLeft">		
+				<% for (var i = 0; i < 9; i++) { %>
+					<label> <%= i+1 %>: </label>
+					<input type="text" class="hole" name="hole<%= i+1 %>">
+					<label> Par: </label>
+					<input type="number" class="hole" value="<%= campo.par[i] %>" disabled > <br>
+				<% } %>
+			</div>
+
+			<div id="parCampoRight">
+				<% for (var i = 9; i < 18; i++) { %>
+					<label> <%= i+1 %>: </label>
+					<input type="text" class="hole" name="hole<%= campo.par[i] %>">
+					<label> Par: </label>
+					<input type="number" class="hole" value="<%= campo.par[i] %>" disabled > <br>
+				<% } %>
+			</div>
+		</div>
+
+		<button type="submit" class="btn btn-primary">Cadastrar</button>
+	</form>
+</div>

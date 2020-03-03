@@ -1,0 +1,122 @@
+.titulo {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.container {
+	margin-top: 20px;
+}
+
+.container-cadastro {
+	width: 35%;
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.navbar-brand {
+	color: white !important;
+}
+
+.telaInicial {
+	width: 70%;
+	margin-left: 15%;
+	margin-right: 15%;
+	display: inline-flex;
+}
+
+.telaInicial .left {
+	float: left;
+	width: 70%;
+	border: 1px solid black;
+	border-radius: 30px;
+	height: 360px;
+}
+
+.telaInicial .right {
+	float: right;
+	width: 30%;
+	border-radius: 30px;
+	height: 360px;
+	border: 1px solid black;
+	text-align: center;
+}
+
+.telaInicial .right h3 {
+	margin-top: 30%;
+}
+
+p, h1, h2, h3, h4, h5, h6, th, td, label{
+	color: white;
+}
+
+img {
+	min-width: 100%;
+	min-height: 100%;
+	max-width: 100%;
+	max-height: 100%;
+	border-radius: 30px;
+	display: block;
+}
+
+.table {
+	width: 85% !important;
+	margin: auto;
+	border: 2px solid white;
+}
+
+.table td {
+	border-top: 0px none #dee2e6 !important;
+	margin-bottom: 0em;
+}
+
+.table .bottom-line {
+	border-bottom: 1px solid #dee2e6;
+}
+
+.btn-primary a {
+	color: white;
+}
+
+.btn-primary a:hover {
+	color: white;
+}
+
+body {
+	background-image: url("/images/background.jpg");
+}
+
+.center {
+	text-align: center;
+}
+
+input[name=nomeCampo]{
+	width: 40%;
+	margin-left: 30%;
+	margin-right: 30%;
+	border-radius: 20px;
+}
+
+.hole {
+	width: 35px;
+	height: 30px;
+	margin: 10px;
+}
+
+#parCampo {
+	display: inline-flex;
+	width: 100%;
+	margin-top: 30px;
+}
+
+#parCampoLeft {
+	float: left;
+	width: 50%;
+	text-align: center;
+}
+
+#parCampoRight {
+	float: right;
+	width: 50%;
+	text-align: center;
+}
