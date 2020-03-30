@@ -1,13 +1,13 @@
 FROM node:12.14.1
 
-WORKDIR /home/node/app
+WORKDIR /home/node/mallet-golf
 
-COPY package*.json .
+COPY package*.json ./
 
 RUN npm install
 
-COPY . .
+COPY app/ ./
 
-EXPOSE 8000
+EXPOSE 8080
 
 CMD ["node", "server.js"]

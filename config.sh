@@ -1,15 +1,15 @@
 #!/bin/bash
-mongo="/usr/bin/mongod"
-if [ -f "$mongo" ]
+docker="/usr/bin/docker"
+
+if [ -f "$docker" ]
 then
-    echo "Mongo já instalado!"
+    echo "Docker já instalado...Prosseguindo"
 else
-    sudo apt-get install gnupg |
-    wget -qO - https://www.mongodb.org/static/pgp/server-4.2.asc | sudo apt-key add -
-    echo "deb [ arch=amd64,arm64,s390x ] http://repo.mongodb.com/apt/ubuntu bionic/mongodb-enterprise/4.2 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-enterprise.list
-    sudo apt-get update |
-    sudo apt-get install -y mongodb-enterprise |
+	echo "Instalando docker..."
+	apt-get update
+	apt-get install docker-ce docker-ce-cli containerd.io
 fi
 
-echo "Setup concluído, para iniciar o servidor:"
-echo "nodemon server.js	"
+echo "Iniciando servidor:"
+docker-compose down
+docker-compose up -d

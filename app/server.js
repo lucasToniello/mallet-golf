@@ -1,11 +1,11 @@
-const port = 8000;
+const port = 8080;
 const express = require('express');
 const expressLayouts = require('express-ejs-layouts');
 const mongoose = require('mongoose');
 const requireDir = require('require-dir'); 
 const app = express();
 
-mongoose.connect("mongodb://localhost:27017/malletGolf", {
+mongoose.connect("mongodb://localhost:27017/mallet-golf", {
 	useNewUrlParser: true,
 	useUnifiedTopology: true
 });
